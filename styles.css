@@ -88,7 +88,7 @@ nav {
 .nav-left .brand {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #111;
   letter-spacing: 0.5px;
 }
@@ -112,9 +112,10 @@ nav {
 
 .nav-links a.active {
   /* Leuchtender Salbei-Akzent */
-  background-color: var(--sage-bright-light);
-  color: var(--sage-bright);
-  border-bottom: 2px solid var(--sage-bright);
+  background-color: var(--sage-bright-light) !important;
+  color: var(--sage-bright) !important;
+  border-bottom: 2px solid var(--sage-bright) !important;
+  box-sizing: border-box;
   
   /* Alternative Farboptionen: */
   /* Warmes Beige/Terrakotta:
@@ -222,6 +223,20 @@ nav {
 
   .burger {
     display: block;
+  }
+  
+  /* Brand etwas kleiner auf mobilen Geräten */
+  .nav-left .brand {
+    font-size: 1.4rem;
+  }
+  
+  /* Überschriften dezenter auf kleinen Screens */
+  h1, h2 { 
+    font-weight: 100; 
+  }
+  
+  h3 { 
+    font-weight: 300; 
   }
 }
 
@@ -673,5 +688,16 @@ footer {
   footer {
     padding: 1.5em 4%;
     font-size: 0.85rem;
+  }
+  
+  /* Überschriften noch dezenter auf sehr kleinen Screens */
+  h1, h2 { 
+    font-weight: 100; 
+    font-size: 0.95em; 
+  }
+  
+  h3 { 
+    font-weight: 200; 
+    font-size: 0.9em;
   }
 }
