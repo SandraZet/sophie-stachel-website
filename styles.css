@@ -31,6 +31,9 @@
   --accent-sage: rgba(156, 170, 155, 0.15);
   --text-dark: #333;
   --text-sage: #5A6B5A;
+  /* Leuchtender Akzent - Warmes Salbei-Grün */
+  --sage-bright: #6B9B7F;
+  --sage-bright-light: rgba(107, 155, 127, 0.2);
 }
 
 /* ---------- Grundlayout ---------- */
@@ -103,13 +106,15 @@ nav {
 }
 
 .nav-links a:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: var(--sage-bright-light);
+  color: var(--sage-bright);
 }
 
 .nav-links a.active {
-  /* Salbei-Grün (aktuell aktiv) */
-  background-color: rgba(139, 185, 174, 0.15);
-  color: #2d5747;
+  /* Leuchtender Salbei-Akzent */
+  background-color: var(--sage-bright-light);
+  color: var(--sage-bright);
+  border-bottom: 2px solid var(--sage-bright);
   
   /* Alternative Farboptionen: */
   /* Warmes Beige/Terrakotta:
@@ -562,7 +567,7 @@ section:nth-child(even) {
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
-    border-left: 4px solid var(--sage-green);
+    border-left: 4px solid var(--sage-bright);
 }
 
 .workshop-themes {
