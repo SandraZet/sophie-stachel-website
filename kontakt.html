@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt & Terminbuchung - Sophie Stachel</title>
+  <meta name="description" content="Kontaktieren Sie Sophie Stachel für einen Termin. Praxis für Lebens- und Sozialberatung - Telefon, E-Mail und Kontaktformular.">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Additional CSS for forms -->
+  <style>
+    form {
+      max-width: 600px;
+      margin: 2em 0 6em 0;
+    }
+    
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    
+    form button {
+      background-color: var(--sage-green);  /* #9CAA9B */
+  color: white;
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+    
+    form button:hover {
+      background-color: #555;
+    }
+    
+    .contact-info {
+      margin-top: 2em;
+      padding: 1.5em;
+      background: rgba(156, 170, 155, 0.1);
+      border-radius: 8px;
+      border-left: 4px solid #9CAA9B;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html" class="brand">Sophie Stachel</a>
+      <div class="nav-links">
+        <a href="methoden.html">Methoden</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="angebote.html">Angebote</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-links mobile-nav" id="navLinks">
+      <a href="methoden.html">Methoden</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="angebote.html">Angebote</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </div>
+
+    <div class="burger" id="burger">&#9776;</div>
+  </nav>
+
+  <!-- Mobile Page Indicator -->
+  <div class="page-indicator">
+    <h2>Kontakt</h2>
+  </div>
+
+  <!-- Content -->
+  <section class="visible">
+    <h3>Nachricht senden</h3>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="E-Mail" required>
+      <textarea name="message" rows="5" placeholder="Nachricht" required></textarea>
+      <button type="submit">Absenden</button>
+    </form>
+    
+    <div class="contact-info">
+      <h3>Kontaktinformationen</h3>
+      <p><strong>Telefon:</strong> 0660 / 57 44 151</p>
+      <p><strong>E-Mail:</strong> kontakt@sophiestachel.at</p>
+      <p><strong>Terminvereinbarung:</strong> Gerne telefonisch oder per E-Mail</p>
+      <p><em>Ich freue mich auf Ihre Nachricht und antworte meist innerhalb von 24 Stunden.</em></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="footer-credits">
+        © 2025 Sophie Stachel | Website erstellt mit ❤️ von GitHub Copilot
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
