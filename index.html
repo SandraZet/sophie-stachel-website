@@ -14,6 +14,9 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
   
+  <!-- Navigation Component -->
+  <script src="components/navbar.js"></script>
+  
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   {
@@ -38,31 +41,10 @@
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-left">
-      <a href="index.html" class="brand">Sophie Stachel</a>
-      <div class="nav-links">
-        <a href="methoden.html">Methoden</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="angebote.html">Angebote</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <div class="nav-links mobile-nav" id="navLinks">
-      <a href="methoden.html">Methoden</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="angebote.html">Angebote</a>
-      <a href="kontakt.html">Kontakt</a>
-    </div>
-
-    <div class="burger" id="burger">&#9776;</div>
-  </nav>
+  <!-- Navigation wird automatisch eingefügt -->
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero" role="banner">
     <div class="hero-text">
       <h1>„Der Verstand sucht, und es ist das Herz, das findet"</h1>
       <span class="author">George Sand</span>
@@ -71,8 +53,9 @@
   </header>
 
   <!-- Main Content -->
-  <section class="visible fade-in">
-    <h2 class="fade-in delay-1">Herzlich willkommen in meiner Praxis</h2>
+  <main role="main" id="main-content">
+    <section class="visible fade-in">
+      <h2 class="fade-in delay-1">Herzlich willkommen in meiner Praxis</h2>
     
     <p class="fade-in delay-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     
@@ -85,14 +68,31 @@
     <p class="fade-in delay-3">Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
     
     <p class="fade-in delay-3">Qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-  </section>
+    </section>
+  </main>
+
+  <!-- Page Navigation -->
+  <nav class="page-navigation" aria-label="Seitennavigation">
+    <div class="nav-button disabled" aria-label="Zurück zur vorherigen Seite (nicht verfügbar)">
+      <span class="nav-arrow" aria-hidden="true">←</span>
+      <span>Zurück</span>
+    </div>
+    <a href="ueber-mich.html" class="nav-button" aria-label="Zur nächsten Seite: Über mich">
+      <span>Über mich</span>
+      <span class="nav-arrow" aria-hidden="true">→</span>
+    </a>
+  </nav>
 
   <!-- Footer -->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-content">
-      <div class="footer-links">
+      <div class="footer-links" role="navigation" aria-label="Footer-Navigation">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
+        <a href="barrierefreiheit.html" aria-label="Barrierefreiheit">🤝</a>
+        <a href="kontakt.html" class="contact-icon" aria-label="Kontakt aufnehmen">
+          <span aria-hidden="true">✉</span>
+        </a>
       </div>
       <div class="footer-credits">
         © 2025 Sophie Stachel | Website erstellt mit ❤️ von GitHub Copilot

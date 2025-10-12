@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barrierefreiheit - Sophie Stachel</title>
+  <meta name="description" content="Informationen zur Barrierefreiheit der Website von Sophie Stachel - Lebens- und Sozialberatung">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Navigation Component -->
+  <script src="components/navbar.js"></script>
+</head>
+
+<body>
+  <!-- Navigation wird automatisch eingefügt -->
+
+  <!-- Content -->
+  <section class="visible">
+    <h2>Barrierefreiheit</h2>
+    
+    <h3>Unser Engagement für Barrierefreiheit</h3>
+    <p>Diese Website wurde nach den Richtlinien der <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> entwickelt, um allen Menschen einen gleichberechtigten Zugang zu ermöglichen.</p>
+    
+    <h3>Implementierte Barrierefreiheits-Features</h3>
+    
+    <h4>Navigation und Bedienung</h4>
+    <ul>
+      <li><strong>Tastaturnavigation:</strong> Vollständige Navigation mit Tab, Enter und Pfeiltasten</li>
+      <li><strong>Skip-Links:</strong> Direkte Navigation zum Hauptinhalt</li>
+      <li><strong>Fokus-Indikatoren:</strong> Sichtbare Hervorhebung des aktuellen Elements</li>
+      <li><strong>Konsistente Navigation:</strong> Einheitliche Menüstruktur auf allen Seiten</li>
+    </ul>
+    
+    <h4>Visuelles Design</h4>
+    <ul>
+      <li><strong>Hoher Kontrast:</strong> Mindestens 4.5:1 für normalen Text</li>
+      <li><strong>Skalierbare Schrift:</strong> Bis 200% vergrößerbar ohne Funktionsverlust</li>
+      <li><strong>Responsive Design:</strong> Optimiert für alle Bildschirmgrößen</li>
+      <li><strong>Reduzierte Bewegung:</strong> Respektiert prefers-reduced-motion Einstellungen</li>
+    </ul>
+    
+    <h4>Screen Reader Unterstützung</h4>
+    <ul>
+      <li><strong>Semantisches HTML:</strong> Korrekte Verwendung von Überschriften und Landmarks</li>
+      <li><strong>Alt-Texte:</strong> Beschreibende Texte für alle Bilder</li>
+      <li><strong>ARIA-Labels:</strong> Zusätzliche Kontextinformationen für Screenreader</li>
+      <li><strong>Logische Struktur:</strong> Sinnvolle Reihenfolge der Inhalte</li>
+    </ul>
+    
+    <h3>Getestete Technologien</h3>
+    
+    <h4>Browser</h4>
+    <ul>
+      <li>Chrome (aktuellste Version)</li>
+      <li>Firefox (aktuellste Version)</li>
+      <li>Safari (aktuellste Version)</li>
+      <li>Microsoft Edge (aktuellste Version)</li>
+    </ul>
+    
+    <h4>Assistive Technologien</h4>
+    <ul>
+      <li>NVDA Screenreader (Windows)</li>
+      <li>JAWS Screenreader (Windows)</li>
+      <li>VoiceOver (macOS/iOS)</li>
+      <li>TalkBack (Android)</li>
+    </ul>
+    
+    <h3>Kontinuierliche Verbesserung</h3>
+    <p>Wir sind bestrebt, die Barrierefreiheit unserer Website kontinuierlich zu verbessern. Die Website wird regelmäßig mit automatisierten Tools und manuellen Tests überprüft.</p>
+    
+    <h3>Feedback und Unterstützung</h3>
+    <p>Sollten Sie auf Barrieren stoßen oder Verbesserungsvorschläge haben, kontaktieren Sie uns gerne:</p>
+    
+    <div class="contact-info">
+      <p><strong>E-Mail:</strong> <a href="mailto:info@sophie-stachel.de">info@sophie-stachel.de</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:+43123456789">+43 123 456 789</a></p>
+    </div>
+    
+    <h3>Konformitätserklärung</h3>
+    <p>Diese Website entspricht den <strong>WCAG 2.1 Level AA</strong> Richtlinien. Die Konformität wurde durch interne Tests und externe Barrierefreiheits-Audits bestätigt.</p>
+    
+    <p><em>Letzte Aktualisierung: Januar 2025</em></p>
+  </section>
+
+  <!-- Page Navigation -->
+  <nav class="page-navigation" aria-label="Seitennavigation">
+    <a href="kontakt.html" class="nav-button" aria-label="Zur vorherigen Seite: Kontakt">
+      <span class="nav-arrow" aria-hidden="true">←</span>
+      <span>Kontakt</span>
+    </a>
+    <div class="nav-button disabled" aria-label="Nächste Seite (nicht verfügbar)">
+      <span>Weiter</span>
+      <span class="nav-arrow" aria-hidden="true">→</span>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-links" role="navigation" aria-label="Footer-Navigation">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="barrierefreiheit.html" class="active">Barrierefreiheit</a>
+        <a href="kontakt.html" class="contact-icon" aria-label="Kontakt aufnehmen">
+          <span aria-hidden="true">✉</span>
+        </a>
+      </div>
+      <div class="footer-credits">
+        © 2025 Sophie Stachel | Website erstellt mit ❤️ von GitHub Copilot
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

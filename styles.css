@@ -26,7 +26,7 @@
 /* ---------- CSS Variables (Farben) ---------- */
 :root {
   --sage-green: #9CAA9B;
-  --sage-green-dark: #7A8A7A;
+  --sage-green-dark: #6B7A6A; /* Darker for better contrast */
   --sage-green-light: #B5C4B5;
   --accent-sage: rgba(156, 170, 155, 0.15);
   --text-dark: #333;
@@ -52,6 +52,99 @@ body {
     radial-gradient(circle at 40% 40%, rgba(119, 158, 203, 0.02) 0%, transparent 50%),
     #fafafa;
 }
+
+/* ---------- Accessibility Styles ---------- */
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for better accessibility */
+a:focus,
+button:focus,
+[tabindex]:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Navigation links - no blue outline on click */
+.nav-links a:focus,
+.nav-links a:active {
+  outline: none !important;
+}
+
+.mobile-nav a:focus,
+.mobile-nav a:active {
+  outline: none !important;
+}
+
+/* Brand link - no outline */
+.brand:focus,
+.brand:active {
+  outline: none !important;
+}
+
+/* Burger menu focus - completely stable */
+.burger:focus,
+.burger:hover,
+.burger:active {
+  outline: none !important;
+  background: none !important;
+  transform: none !important;
+  position: static !important;
+  transition: none !important;
+}
+
+/* Skip link for keyboard navigation - completely hidden until focus */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 a { text-decoration: none; color: inherit; }
 h1, h2, h3 { margin: 0.5em 0; font-weight: 200; }
 h3 { font-weight: 500; margin-top: 2em; }
@@ -62,6 +155,22 @@ section > *:first-child {
   margin-top: 0 !important;
 }
 p { margin: 0.5em 0; font-weight: 200; }
+
+/* Remove bottom margin from last paragraph in sections */
+section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Main content - no bottom margin/padding */
+main {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Section - really no bottom spacing */
+section {
+  margin-bottom: 0 !important;
+}
 
 /* ---------- Animations ---------- */
 .fade-in {
@@ -101,7 +210,7 @@ nav {
   padding: 1em 4%;
   background: rgba(255,255,255,0.95);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 100;
+  z-index: 103;
   width: 100%;
   box-sizing: border-box;
 }
@@ -172,11 +281,11 @@ nav {
   cursor: pointer;
   color: #666;
   opacity: 0.8;
-  transition: opacity 0.2s ease;
-}
-
-.burger:hover {
-  opacity: 1;
+  outline: none;
+  border: none;
+  background: none;
+  position: relative;
+  transition: none;
 }
 
 /* Body Overlay für Burger Menu */
@@ -188,7 +297,7 @@ body.menu-open::before {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 500;
+  z-index: 99;
   opacity: 0;
   animation: fadeInOverlay 0.3s ease forwards;
 }
@@ -199,11 +308,7 @@ body.menu-open::before {
   }
 }
 
-/* Navigation Container erhält höheren z-index */
-nav {
-  position: relative;
-  z-index: 1001;
-}
+
 
 /* Mobile Navigation */
 .mobile-nav {
@@ -217,7 +322,7 @@ nav {
   padding: 1em;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   border-radius: 0 0 0 8px;
-  z-index: 1000;
+  z-index: 101;
 }
 
 .mobile-nav a {
@@ -251,6 +356,11 @@ nav {
 
   .burger {
     display: block;
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 102;
   }
   
   /* Brand etwas kleiner auf mobilen Geräten */
@@ -258,15 +368,31 @@ nav {
     font-size: 1.4rem;
   }
   
-  /* Überschriften dezenter auf kleinen Screens */
-  h1, h2 { 
-    font-weight: 100; 
+  /* Überschriften auf kleinen Screens */
+  h1 { 
+    font-weight: 100;
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
   }
   
   h3 { 
-    font-weight: 300; 
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+  
+  /* Nur für die Willkommen- und Ausbildung-Überschriften */
+  h2.fade-in.delay-1,
+  section h2.fade-in:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }
+
+
 
 /* ---------- Hero-Bereich ---------- */
 .hero {
@@ -321,11 +447,11 @@ nav {
 }
 
 .page-indicator h2 {
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 500;
   color: var(--sage-green);
   margin: 0;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: left;
 }
 
@@ -341,7 +467,7 @@ section {
   transform: translateY(0);
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2em 4%;
+  padding: 2em 4% 0 4%;
 }
 
 section.visible {
@@ -666,7 +792,7 @@ footer {
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
   margin-top: 3em;
-  padding: 2em 4%;
+  padding: 1.5em 4%;
   text-align: center;
   font-size: 0.9rem;
   color: #666;
@@ -675,16 +801,17 @@ footer {
 .footer-content {
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  text-align: center;
 }
 
 .footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  flex-wrap: nowrap;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 2em !important;
+  flex-wrap: nowrap !important;
+  flex-direction: row !important;
+  margin-bottom: 0.8em;
 }
 
 .footer-links a {
@@ -693,6 +820,7 @@ footer {
   padding: 0.3em 0.6em;
   border-radius: 4px;
   transition: background-color 0.2s ease;
+  display: inline-block;
 }
 
 .footer-links a:hover {
@@ -702,7 +830,7 @@ footer {
 .footer-credits {
   font-size: 0.8rem;
   opacity: 0.7;
-  margin-top: 0.5em;
+  margin: 0;
 }
 
 /* Mobile Footer */
@@ -727,5 +855,73 @@ footer {
   h3 { 
     font-weight: 200; 
     font-size: 0.9em;
+  }
+}
+
+/* ---------- Page Navigation ---------- */
+.page-navigation {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  z-index: 1;
+  position: relative;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em 1.5em;
+  background: var(--sage-bright-light);
+  color: var(--sage-bright);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-button:hover {
+  background: var(--sage-bright);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 155, 127, 0.3);
+}
+
+.nav-button.disabled {
+  background: #f8f9fa;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.nav-button.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-arrow {
+  font-size: 1.2em;
+}
+
+/* Mobile Page Navigation */
+@media (max-width: 768px) {
+  .page-navigation {
+    padding: 1.5em 4%;
+  }
+  
+  .nav-button {
+    padding: 0.8em 1.2em;
+    font-size: 0.9rem;
+  }
+  
+  .nav-button span:not(.nav-arrow) {
+    display: none;
   }
 }

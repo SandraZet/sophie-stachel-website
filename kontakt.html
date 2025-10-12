@@ -12,6 +12,9 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
   
+  <!-- Navigation Component -->
+  <script src="components/navbar.js"></script>
+  
   <!-- Additional CSS for forms -->
   <style>
     form {
@@ -58,28 +61,7 @@
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-left">
-      <a href="index.html" class="brand">Sophie Stachel</a>
-      <div class="nav-links">
-        <a href="methoden.html">Methoden</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="angebote.html">Angebote</a>
-        <a href="kontakt.html" class="active">Kontakt</a>
-      </div>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <div class="nav-links mobile-nav" id="navLinks">
-      <a href="methoden.html">Methoden</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="angebote.html">Angebote</a>
-      <a href="kontakt.html" class="active">Kontakt</a>
-    </div>
-
-    <div class="burger" id="burger">&#9776;</div>
-  </nav>
+  <!-- Navigation wird automatisch eingefügt -->
 
   <!-- Mobile Page Indicator -->
   <div class="page-indicator">
@@ -105,12 +87,28 @@
     </div>
   </section>
 
+  <!-- Page Navigation -->
+  <nav class="page-navigation">
+    <a href="angebote.html" class="nav-button">
+      <span class="nav-arrow">←</span>
+      <span>Angebote</span>
+    </a>
+    <div class="nav-button disabled">
+      <span>Weiter</span>
+      <span class="nav-arrow">→</span>
+    </div>
+  </nav>
+
   <!-- Footer -->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-content">
-      <div class="footer-links">
+      <div class="footer-links" role="navigation" aria-label="Footer-Navigation">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
+        <a href="barrierefreiheit.html" aria-label="Barrierefreiheit">🤝</a>
+        <a href="kontakt.html" class="contact-icon" aria-label="Kontakt aufnehmen">
+          <span aria-hidden="true">✉</span>
+        </a>
       </div>
       <div class="footer-credits">
         © 2025 Sophie Stachel | Website erstellt mit ❤️ von GitHub Copilot
