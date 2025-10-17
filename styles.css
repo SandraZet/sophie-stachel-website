@@ -34,6 +34,9 @@
   /* Leuchtender Akzent - Warmes Salbei-Grün */
   --sage-bright: #6B9B7F;
   --sage-bright-light: rgba(107, 155, 127, 0.2);
+  /* Leuchtendes Taubenblau für Akzente */
+  --dove-blue: #7BA5CC;
+  --dove-blue-light: rgba(123, 165, 204, 0.2);
 }
 
 /* ---------- Grundlayout ---------- */
@@ -414,7 +417,7 @@ body.menu-open::before {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: visible; /* Damit die Welle nach unten ragen kann */
 }
 
 .hero-text {
@@ -423,6 +426,8 @@ body.menu-open::before {
   margin-right: 5%;   
   margin-left: 5%;
 }
+
+
 
 .hero-text h1 {
   font-size: clamp(1.6rem, 5vw, 1.8rem);
@@ -482,6 +487,30 @@ section.visible {
 section:nth-child(even) {
   background-color: #fbfcfd;
   color: #555;
+}
+
+/* ---------- Dekorative Wellenlinien als Trenner ---------- */
+.wave-divider {
+  width: 100%;
+  height: 80px;
+  margin: 3em 0 2em 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Optional: für abwechselnde Farben */
+.wave-divider.blue svg path {
+  fill: #7BA5CC;
+}
+
+.wave-divider.sage svg path {
+  fill: #6B9B7F;
 }
 
 /* ---------- Page Header (für Seiten ohne Hero) ---------- */
