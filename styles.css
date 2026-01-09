@@ -150,6 +150,7 @@ button:focus,
 
 a { text-decoration: none; color: inherit; }
 h1, h2, h3 { margin: 0.5em 0; font-weight: 200; }
+h2.welcome-heading { color: #C85A8E; } /* Energetische Magenta-Farbe */
 h3 { font-weight: 500; margin-top: 2em; }
 h3:first-of-type { margin-top: 0.5em; }
 
@@ -408,7 +409,7 @@ body.menu-open::before {
   max-height: 80vh;
   background: 
     linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)),
-    url('img/156.jpg');
+    url('img/hero4.jpg');
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
@@ -476,7 +477,7 @@ section {
   transform: translateY(0);
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2em 4% 0 4%;
+  padding: 1em 4% 0 4%;
 }
 
 section.visible {
@@ -860,11 +861,11 @@ section:nth-child(even) {
 .praxis-card-inner {
   display: flex;
   align-items: flex-start;
-  gap: 2em;
+  gap: 1.5em;
   flex-wrap: wrap;
 }
 .praxis-bild {
-  width: 180px;
+  width: 150px;
   max-width: 40vw;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -873,7 +874,6 @@ section:nth-child(even) {
 .praxis-adresse {
   font-size: 1em;
   line-height: 1.5;
-  margin-top: 0.5em;
 }
 @media (max-width: 600px) {
   .praxis-card-inner {
@@ -931,12 +931,11 @@ section:nth-child(even) {
 }
 
 .kontakt-profilfoto {
-  width: 120px; /* Breite des Bildes */
+  width: 150px; /* Breite des Bildes */
   height: auto;
-  border-radius: 2px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   flex-shrink: 0; /* Bild wird nicht kleiner */
-  margin-top: 0.9em; /* Etwas Abstand oben */
 }
 
 .contact-text {

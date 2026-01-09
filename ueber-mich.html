@@ -12,15 +12,15 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
   
-  <!-- Responsive Layout for Photo/Qualifications -->
+  <!-- Responsive Layout for Text/Photo -->
   <style>
     @media (max-width: 768px) {
-      .photo-qualifications-container {
+      .text-photo-container {
         flex-direction: column !important;
         align-items: center !important;
       }
-      .photo-column {
-        margin-bottom: 2em;
+      .text-photo-container img {
+        margin-top: 2em;
       }
     }
   </style>
@@ -39,28 +39,36 @@
 
   <!-- Content -->
   <section>
-    <p class="fade-in">Aufgewachsen in einer Gemeinschaft, die auf Ökologie und Soziales Wert legt, war für mich mein Körper schon als Kind eine Quelle für Spiel, Kraft, Ruhe und Behaglichkeit. Meine Mutter als Cranio-Sacral-Therapeutin hat mir schon früh gezeigt, welch unermesslicher Schatz mit eigenen sich regulierenden Rhythmen in uns liegt, wenn wir uns dem inneren Erleben neugierig zuwenden.</p>
-    
-    <p class="fade-in">Als Jugendliche begann ich mich mit Spiritualität und Meditation auseinanderzusetzen und bin zu der Erkenntnis gekommen, dass Achtsamkeit für mich erst dann greifbar wird, wenn sie im Alltag und in Bewegung lebbar ist. In der Begleitung von Menschen und auch bei Schwierigkeiten in meinem eigenen Leben sehe ich immer aufs Neue, wie wichtig Ressourcen und das Lebendige sind, um die Höhen und Tiefen eines Lebens zu erleben, dabei mit sich selbst in Kontakt zu sein und in Verbindung mit der Welt.</p>
-    
-    <p class="fade-in">In der Praxis ist für mich ein achtsamer, behutsamer Umgang auf dem Weg nach innen genauso wichtig wie ein Zulassen und Kennenlernen der ungebändigten Aspekte. Menschen auf dem Weg zu ihrer Lebendigkeit, Tiefe und Leichtigkeit zu erleben und sie dabei auf eine liebevolle Art zu begleiten, ist für mich eine Quelle der Freude.</p>
-    
-    <!-- Photo and Qualifications Section -->
-    <div class="photo-qualifications-container fade-in" style="display: flex !important; gap: 3em; align-items: start; margin-top: 3em;">
-      <div class="photo-column" style="flex-shrink: 0;">
-        <img src="img/sophie.png" alt="Sophie Stachel Portrait" style="width: 220px !important; max-width: 220px !important; border-radius: 8px;">
+    <!-- Text with Photo Section -->
+    <div class="text-photo-container fade-in" style="display: flex; gap: 3em; align-items: start; margin-bottom: 3em;">
+      <div style="flex: 1;">
+        <p>Ich erinnere mich, dass mein Körper für mich bereits als Kind eine Quelle für Kraft, Ruhe, Spiel und Behaglichkeit war. Mir wurde sehr früh bewusst, welch unermesslicher Schatz mit eigenen sich regulierenden Rhythmen in uns liegt, wenn wir uns dem inneren Erleben mit offener Neugier zuwenden.</p>
+        
+        <p>Später im Zuge meiner Beschäftigung mit buddhistischer Philosophie und unterschiedlichen achtsamkeitsbasierten Praktiken kam ich zu der Erkenntnis, dass diese mich dann erst dann richtig neugierig machen, wenn sie in meinem täglichen Leben spürbar und lebendig sind.</p>
+        
+        <p>In meinem persönlichen Leben wurde ich immer wieder vor große Herausforderungen gestellt. Wiederholt hat sich mir gezeigt, dass es auch unter sehr herausfordernden Belastungen möglich ist, Schritt für Schritt zurück in ein Gefühl von Sicherheit, Lebendigkeit und Beweglichkeit zu finden. Dabei war mir die Unterstützung von professionellen Begleiter*innen eine wichtige Stütze und hilfreicher Lernraum. Über Hakomi und Somatic Experiencing, aber auch im Yoga und im Tanz habe ich Zugänge gefunden, an den Herausforderungen zu wachsen und meine Resilienz zu entfalten. Es war und ist fortwährend ein natürlicher Prozess, meine Achtsamkeitspraxis in mein tägliches Leben zu integrieren und mich so lebendiger, selbstbestimmter und in Verbindung mit mir und der Welt zu erleben.</p>
+        
+        <p>Auch in der Begleitung von Menschen ist mir ein ressourcenorientierter Zugang, Humor und eine interessierte Offenheit für die unterschiedlichsten Lebensrealitäten wichtig. Dieser Zugang schließt sowohl einen achtsamen, behutsamen Weg nach innen als auch das Zulassen und Erkunden ungebändigter innerer Aspekte mit ein.</p>
+        
+        <p>Menschen auf dem Weg zu ihrer Lebendigkeit, Tiefe und Leichtigkeit zu erleben und sie dabei auf eine respektvolle Art zu begleiten, ist für mich eine Quelle der Freude.</p>
       </div>
-      <div class="qualifications-column" style="flex: 1;">
-        <h2>Ausbildung</h2>
-        <ul>
-          <li>Hakomi Körperpsychotherapie-Ausbildung 2011–2014, Hakomi Institut Nürnberg</li>
-          <li>Somatic Experiencing® 2015/18–2021 bei Urs Rentsch, Institut Apsys</li>
-          <li>Integrative Trauma Arbeit 2014–2016: PITT & SE bei Urs Rentsch und Ulrike Reddemann</li>
-          <li>Lehrgang Tanz- und Bewegungspädagogik 2023–2024 bei Mona Schramke</li>
-          <li>Mag.a (FH) für Soziale Arbeit, Gewerbschein f. Lebens- und Sozialberatung</li>
-          <li>Teilstudium Tibetologie und Buddhismus</li>
-        </ul>
+      <div style="flex-shrink: 0;">
+        <img src="img/sophie.png" alt="Sophie Stachel Portrait" style="width: 220px; max-width: 220px; border-radius: 8px;">
       </div>
+    </div>
+
+    <!-- Qualifications Section -->
+    <div class="qualifications-section fade-in">
+      <h2>Ausbildung & Berufserfahrung</h2>
+      <ul>
+        <li>Hakomi® Körperpsychotherapie 2011-2014, Hakomi Institute of Europe</li>
+        <li>Somatic Experiencing® 2018 - 2021, Institut Apsys (Urs Rentsch, Heike Gattnar)</li>
+        <li>Integrative Trauma Arbeit 2014-2016, Institut Apsys (Ulrike Reddemann, Urs Rentsch)</li>
+        <li>Lehrgang für Tanz- und Bewegungspädagogik 2023-2024</li>
+        <li>Mag.a (FH) für Soziale Arbeit, Gewerbeschein für Lebens- und Sozialberatung</li>
+        <li>Teilstudium Tibetologie und Buddhismuskunde</li>
+        <li>seit 2010 im psychosozialen Zentrum ESRA beschäftigt, aktuell in der Arbeit mit Holocaust-Überlebenden</li>
+      </ul>
     </div>
 
     <div class="legal-info">

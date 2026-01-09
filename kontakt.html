@@ -50,12 +50,25 @@
       background-color: #555;
     }
     
-    .contact-info {
+    .contact-cards-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2em;
       margin-top: 2em;
+    }
+    
+    @media (min-width: 768px) {
+      .contact-cards-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .contact-info {
       padding: 1.5em;
       background: rgba(156, 170, 155, 0.1);
       border-radius: 8px;
       border-left: 4px solid #9CAA9B;
+      margin-top: 0;
     }
   </style>
 </head>
@@ -80,18 +93,34 @@
 
     
     
-    <div class="contact-info">
-  <h3>Kontaktinformationen</h3>
-  <div class="contact-info-inner">
-    <img src="img/portrait-kontakt.JPG" alt="Profilfoto Sophie Stachel" class="kontakt-profilfoto">
-    <div class="contact-text">
-      <p><strong>Telefon:</strong> 0660 / 57 44 151</p>
-      <p><strong>E-Mail:</strong> kontakt@sophiestachel.at</p>
-      <p><strong>Terminvereinbarung:</strong> Gerne telefonisch oder per E-Mail</p>
-      <p><em>Ich freue mich auf Ihre Nachricht und antworte meist innerhalb von 24 Stunden.</em></p>
+    <div class="contact-cards-container">
+      <div class="contact-info">
+        <h3>Kontaktinformationen</h3>
+        <div class="contact-info-inner">
+          <img src="img/sophie-portrait.jpg" alt="Profilfoto Sophie Stachel" class="kontakt-profilfoto">
+          <div class="contact-text">
+            <p><strong>E-Mail:</strong> kontakt@sophiestachel.at</p>
+            <p><strong>Telefonnummer:</strong> +43 660 34 34 245</p>
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h3>Meine Praxis</h3>
+        <div class="praxis-card-inner">
+          <img src="img/praxis-raum.JPG" alt="Praxisraum Sophie Stachel" class="praxis-bild">
+          <div class="praxis-adresse">
+            <p><strong>Adresse:</strong><br>
+            Laudongasse 42/4<br>
+            1080 Wien<br>
+            <span style="font-size:0.95em; color:#666;">(im Hochparterre)</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </section>
 
  
