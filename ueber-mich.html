@@ -12,6 +12,19 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
   
+  <!-- Responsive Layout for Photo/Qualifications -->
+  <style>
+    @media (max-width: 768px) {
+      .photo-qualifications-container {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .photo-column {
+        margin-bottom: 2em;
+      }
+    }
+  </style>
+  
   <!-- Navigation Component -->
   <script src="components/navbar.js"></script>
 </head>
@@ -32,27 +45,23 @@
     
     <p class="fade-in">In der Praxis ist für mich ein achtsamer, behutsamer Umgang auf dem Weg nach innen genauso wichtig wie ein Zulassen und Kennenlernen der ungebändigten Aspekte. Menschen auf dem Weg zu ihrer Lebendigkeit, Tiefe und Leichtigkeit zu erleben und sie dabei auf eine liebevolle Art zu begleiten, ist für mich eine Quelle der Freude.</p>
     
-    <!-- Image Gallery -->
-    <div class="image-gallery fade-in">
-      <div class="image-item portrait fade-in">
-        <img src="img/sophie.png" alt="Sophie Stachel Portrait">
-        
+    <!-- Photo and Qualifications Section -->
+    <div class="photo-qualifications-container fade-in" style="display: flex !important; gap: 3em; align-items: start; margin-top: 3em;">
+      <div class="photo-column" style="flex-shrink: 0;">
+        <img src="img/sophie.png" alt="Sophie Stachel Portrait" style="width: 220px !important; max-width: 220px !important; border-radius: 8px;">
       </div>
-      <div class="image-item portrait fade-in">
-        <img src="img/portrait2.JPG" alt="Praxis Räumlichkeiten">
-        
+      <div class="qualifications-column" style="flex: 1;">
+        <h2>Ausbildung</h2>
+        <ul>
+          <li>Hakomi Körperpsychotherapie-Ausbildung 2011–2014, Hakomi Institut Nürnberg</li>
+          <li>Somatic Experiencing® 2015/18–2021 bei Urs Rentsch, Institut Apsys</li>
+          <li>Integrative Trauma Arbeit 2014–2016: PITT & SE bei Urs Rentsch und Ulrike Reddemann</li>
+          <li>Lehrgang Tanz- und Bewegungspädagogik 2023–2024 bei Mona Schramke</li>
+          <li>Mag.a (FH) für Soziale Arbeit, Gewerbschein f. Lebens- und Sozialberatung</li>
+          <li>Teilstudium Tibetologie und Buddhismus</li>
+        </ul>
       </div>
     </div>
-    
-    <h2 class="fade-in">Ausbildung</h2>
-    <ul>
-      <li>Hakomi Körperpsychotherapie-Ausbildung 2011–2014, Hakomi Institut Nürnberg</li>
-      <li>Somatic Experiencing® 2015/18–2021 bei Urs Rentsch, Institut Apsys</li>
-      <li>Integrative Trauma Arbeit 2014–2016: PITT & SE bei Urs Rentsch und Ulrike Reddemann</li>
-      <li>Lehrgang Tanz- und Bewegungspädagogik 2023–2024 bei Mona Schramke</li>
-      <li>Mag.a (FH) für Soziale Arbeit, Gewerbschein f. Lebens- und Sozialberatung</li>
-      <li>Teilstudium Tibetologie und Buddhismus</li>
-    </ul>
 
     <div class="legal-info">
       <h4>Rechtliche Einordnung</h4>
