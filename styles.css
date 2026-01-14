@@ -149,9 +149,32 @@ button:focus,
 }
 
 a { text-decoration: none; color: inherit; }
-h1, h2, h3 { margin: 0.5em 0; font-weight: 200; }
-h2.welcome-heading { color: #6B9B7F !important; } /* Salbei-Grün oder taubenblau 7B9FAD*/ 
-h3 { font-weight: 500; margin-top: 2em; }
+
+/* Überschriften-Stile */
+h1 { 
+  margin: 0.5em 0;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+
+h2 {
+  margin: 0.5em 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h2.welcome-heading { color: #6B9B7F !important; margin: 0.5em 0;
+  font-weight: 400;
+  font-size: 1.5rem;} /* Salbei-Grün oder taubenblau 7B9FAD*/
+
+ /* Salbei-Grün oder taubenblau 7B9FAD*/
+
+h3 { 
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin-top: 2em;
+}
+
 h3:first-of-type { margin-top: 0.5em; }
 
 /* Erstes Element in Section hat konsistenten Abstand */
@@ -373,44 +396,17 @@ body.menu-open::before {
     font-size: 1.5rem;
     color: #545454;
   }
-  
-  /* Überschriften auf kleinen Screens */
-  h1 { 
-    font-weight: 100;
-    font-size: 1.8rem;
-  }
-  
-  h2 {
-    font-weight: 400;
-    font-size: 1.6rem;
-  }
-  
-  h3 { 
-    font-weight: 300;
-    font-size: 1.3rem;
-  }
-
-  
 }
 
-
-  
-  /* Nur für die Willkommen- und Ausbildung-Überschriften */
-  h2.fade-in.delay-1,
-  section h2.fade-in:first-of-type {
-    font-size: 1.2rem;
-    font-weight: 300;
-     color: #e67300;
-  }
 
 /* ---------- Hero-Bereich ---------- */
 .hero {
   position: relative;
-  min-height: clamp(50vh, 60vh, 70vh);
-  max-height: 80vh;
+  min-height: clamp(70vh, 85vh, 95vh);
+  max-height: 95vh;
   background: 
     linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)),
-    url('img/hero_sophie.jpeg');
+    url('img/hero5.JPG');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -533,9 +529,9 @@ section:nth-child(even) {
 /* ---------- Responsives Design ---------- */
 @media(min-width:768px){
   .hero {
-    min-height: 60vh;
-    max-height: 75vh;
-    background-position: center 25%;
+    min-height:vh;
+    max-height: 88vh;
+    background-position: center 35%;
   }
   .hero-text h1 { font-size: 1.8rem; }
   .hero-text .author { font-size: 1.1rem; }
@@ -544,8 +540,8 @@ section:nth-child(even) {
 
 @media(min-width:1200px){
   .hero {
-    min-height: 65vh;
-    max-height: 70vh;
+    min-height: 85vh;
+    max-height: 92vh;
     background-position: center 38%;
   }
   .hero-text h1 { font-size: 1.8rem; }
@@ -555,8 +551,8 @@ section:nth-child(even) {
 
 @media(min-width:1600px){
   .hero {
-    min-height: 60vh;
-    max-height: 65vh;
+    min-height: 88vh;
+    max-height: 95vh;
     background-position: center 15%;
   }
 }
@@ -931,6 +927,15 @@ section:nth-child(even) {
   flex-wrap: wrap; /* Damit es auf kleinen Bildschirmen untereinander geht */
 }
 
+/* Überschriften in Kontakt-Boxen hervorheben */
+.contact-info h3 {
+  color: var(--sage-green);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 .kontakt-profilfoto {
   width: 150px; /* Breite des Bildes */
   height: auto;
@@ -1082,5 +1087,18 @@ footer {
   
   .nav-button span:not(.nav-arrow) {
     display: none;
+  }
+  
+  /* Responsive Überschriften auf mobilen Geräten */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
   }
 }
