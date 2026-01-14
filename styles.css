@@ -307,7 +307,7 @@ nav {
   display: none;
   font-size: 1.3rem;
   cursor: pointer;
-  color: #666;
+  color: #7B9FAD;
   opacity: 0.8;
   outline: none;
   border: none;
@@ -394,7 +394,7 @@ body.menu-open::before {
   /* Brand etwas kleiner auf mobilen Geräten */
   .nav-left .brand {
     font-size: 1.5rem;
-    color: #545454;
+    color: #7B9FAD;
   }
 }
 
