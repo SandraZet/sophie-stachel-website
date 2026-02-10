@@ -599,7 +599,6 @@ section:nth-child(even) {
 
 .method-image {
   overflow: hidden;
-  border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 500px;
@@ -611,7 +610,6 @@ section:nth-child(even) {
   height: 280px;
   object-fit: cover;
   object-position: center center;
-  border-radius: 12px;
   transition: transform 0.2s ease;
   display: block;
   max-width: 100%;
@@ -945,7 +943,8 @@ section:nth-child(even) {
   width: 150px; /* Breite des Bildes */
   height: 150px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center center;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   flex-shrink: 0; /* Bild wird nicht kleiner */
 }
