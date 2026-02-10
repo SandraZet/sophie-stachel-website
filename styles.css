@@ -602,7 +602,7 @@ section:nth-child(even) {
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 500px;
-  margin: 2.5em auto 0 auto;
+  margin: 0 auto;
 }
 
 .method-image img {
