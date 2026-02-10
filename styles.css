@@ -629,9 +629,12 @@ section:nth-child(even) {
     margin: 2em 0;
   }
   
-  .method-item:nth-child(even) .method-content,
-  .method-item:nth-child(even) .method-image {
-    order: initial;
+  .method-image {
+    order: -1;
+  }
+  
+  .method-content {
+    order: 1;
   }
   
   .method-image img {
@@ -658,7 +661,6 @@ section:nth-child(even) {
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center center;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -734,7 +736,6 @@ section:nth-child(even) {
   height: 280px;
   object-fit: cover;
   object-position: top center;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
@@ -843,7 +844,7 @@ section:nth-child(even) {
     border-radius: 8px;
     margin: 20px 0;
     margin-bottom: 60px;
-    border-left: 4px solid var(--sage-bright);
+    border-left: 4px solid var(--sage-green);
 }
 
 .workshop-themes {
@@ -865,7 +866,6 @@ section:nth-child(even) {
 .praxis-bild {
   width: 150px;
   max-width: 40vw;
-  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   flex-shrink: 0;
 }
@@ -939,8 +939,9 @@ section:nth-child(even) {
 
 .kontakt-profilfoto {
   width: 150px; /* Breite des Bildes */
-  height: auto;
-  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center 20%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   flex-shrink: 0; /* Bild wird nicht kleiner */
 }
