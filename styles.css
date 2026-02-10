@@ -637,6 +637,10 @@ section:nth-child(even) {
     order: 1;
   }
   
+  .method-content h3 {
+    text-align: center;
+  }
+  
   .method-image img {
     height: 250px;
   }
