@@ -371,8 +371,8 @@ body.menu-open::before {
   font-weight: 400;
 }
 
-/* Mobile Screens */
-@media (max-width: 768px) {
+/* Mobile Screens and Tablets - Extended breakpoint to prevent two-line navbar */
+@media (max-width: 1050px) {
   .nav-left .nav-links {
     display: none; /* Links verschwinden, Burger übernimmt */
   }
@@ -439,7 +439,7 @@ body.menu-open::before {
 }
 
 .hero-text .subtitle {
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(0.75rem, 1.5vw, 0.9rem);
   color: #D5E5D4;
   margin-top: 0.1em;
@@ -575,6 +575,7 @@ section:nth-child(even) {
 .method-image {
   min-width: 0;
   width: 100%;
+  margin-top: 0;
 }
 
 .method-item:first-child {
@@ -602,7 +603,9 @@ section:nth-child(even) {
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 12px auto 0 auto;
+  align-self: flex-start;
+  padding: 0;
 }
 
 .method-image img {
@@ -613,6 +616,8 @@ section:nth-child(even) {
   transition: transform 0.2s ease;
   display: block;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .method-image img:hover {
@@ -684,6 +689,65 @@ section:nth-child(even) {
   margin-bottom: 0.6em;
 }
 
+/* About page qualifications with portrait on the side (large screens only) */
+.about-qualifications-container {
+  display: flex;
+  gap: 3em;
+  margin-bottom: 3em;
+  align-items: center;
+}
+
+.about-qualifications-content h2 {
+  margin-top: 0;
+}
+
+.about-qualifications-content {
+  flex: 1;
+}
+
+/* Default: Hide portrait column */
+.about-portrait-column {
+  flex-shrink: 0;
+  display: none;
+}
+
+.about-portrait-column img {
+  width: 220px;
+  max-width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Show portrait next to qualifications on tablet and larger screens */
+@media (min-width: 769px) {
+  .about-portrait-column {
+    display: block !important;
+  }
+}
+
+/* Qualifications list styling (like service-list) */
+.qualifications-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 15px 0;
+  color: #666; /* Gräulicher Text wie bei service-list */
+}
+
+.qualifications-list li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.8;
+}
+
+.qualifications-list li:before {
+  content: "•";
+  color: var(--sage-green);
+  font-weight: bold;
+  position: absolute;
+  left: 3px;
+  top: 6px;
+}
+
 /* Tablet: Stack vertically */
 @media (max-width: 1024px) {
   .photo-qualifications-container {
@@ -699,6 +763,10 @@ section:nth-child(even) {
     width: 280px !important;
     margin: 0 auto;
     display: block;
+  }
+  
+  .about-qualifications-container {
+    flex-direction: column;
   }
 }
 
@@ -867,6 +935,8 @@ section:nth-child(even) {
 }
 .praxis-bild {
   width: 150px;
+  height: 150px;
+  object-fit: cover;
   max-width: 40vw;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   flex-shrink: 0;
@@ -944,7 +1014,7 @@ section:nth-child(even) {
   height: 150px;
   object-fit: cover;
   object-position: center center;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   flex-shrink: 0; /* Bild wird nicht kleiner */
 }
@@ -961,7 +1031,7 @@ footer {
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
   margin-top: 3em;
-  padding: 1.5em 4%;
+  padding: 2em 4%;
   text-align: center;
   font-size: 0.9rem;
   color: #666;

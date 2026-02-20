@@ -24,12 +24,27 @@
   
   <!-- Responsive Layout for Text/Photo -->
   <style>
+    .text-photo-container {
+      display: flex;
+      gap: 3em;
+      align-items: center;
+      margin-bottom: 3em;
+    }
+    
+    /* Default: Hide top portrait */
+    .top-portrait-column {
+      display: none !important;
+    }
+    
+    /* Mobile: Show top portrait, hide bottom portrait */
     @media (max-width: 768px) {
       .text-photo-container {
-        flex-direction: column !important;
-        align-items: center !important;
+        display: block !important;
       }
-      .text-photo-container img {
+      
+      .top-portrait-column {
+        display: block !important;
+        text-align: center;
         margin-top: 2em;
       }
     }
@@ -50,7 +65,7 @@
   <!-- Content -->
   <section>
     <!-- Text with Photo Section -->
-    <div class="text-photo-container fade-in" style="display: flex; gap: 3em; align-items: start; margin-bottom: 3em;">
+    <div class="text-photo-container fade-in">
       <div style="flex: 1;">
         <p>Ich erinnere mich, dass mein Körper für mich bereits als Kind eine Quelle für Kraft, Ruhe, Spiel und Behaglichkeit war. Mir wurde sehr früh bewusst, welch unermesslicher Schatz mit eigenen sich regulierenden Rhythmen in uns liegt, wenn wir uns dem inneren Erleben mit offener Neugier zuwenden.</p>
         
@@ -60,24 +75,29 @@
         
         <p>In der Begleitung von Menschen ist mir ein ressourcenorientierter Zugang, Humor und eine interessierte Offenheit für die unterschiedlichsten Lebensrealitäten wichtig. Dieser Zugang schließt sowohl einen achtsamen, behutsamen Weg nach innen als auch das Zulassen und Erkunden ungebändigter innerer Aspekte mit ein.</p>
       </div>
-      <div style="flex-shrink: 0;">
+      <div class="top-portrait-column" style="flex-shrink: 0;">
         <img src="img/sophie-portrait-2.jpg" alt="Sophie Stachel - Körperorientierte Beratung Wien" style="width: 220px; max-width: 220px;">
       </div>
     </div>
 
-    <!-- Qualifications Section -->
-    <div class="qualifications-section fade-in" style="padding-bottom: 3em;">
-      <h2 style="color: #2a6b7e;">Ausbildung & Berufserfahrung</h2>
-      <ul>
+    <!-- Qualifications Section with Portrait (for large screens) -->
+    <div class="about-qualifications-container fade-in">
+      <div class="about-qualifications-content">
+        <h2 style="color: #2a6b7e;">Ausbildung & Berufserfahrung</h2>
+        <ul class="qualifications-list">
         <li>Hakomi Körperpsychotherapie 2011-2014, Hakomi Institute of Europe</li>
         <li>Somatic Experiencing® 2018 - 2021, Institut Apsys</li>
-        <li>Integrative Trauma Arbeit 2014-2016, Institut Apsys</li>
+        <li>Integrative Trauma Arbeit (PITT & SE) 2014-2016, Institut Apsys</li>
         <li>Lehrgang für Tanz- und Bewegungspädagogik 2023-2024</li>
-        <li>Mag.a (FH) für Soziale Arbeit, Gewerbeschein für Lebens- und Sozialberatung</li>
+        <li>Mag.<sup>a</sup>(FH) für Soziale Arbeit, Gewerbeschein für Lebens- und Sozialberatung</li>
         <li>Teilstudium Tibetologie und Buddhismuskunde</li>
         <li>seit 2010 im psychosozialen Zentrum ESRA beschäftigt, aktuell in der Arbeit mit Holocaust-Überlebenden</li>
         <li>Kontinuierliche Weiterbildung in somatischen Methoden  - Tanz, Yoga, Körperarbeit</li>
       </ul>
+      </div>
+      <div class="about-portrait-column">
+        <img src="img/sophie-portrait-2.jpg" alt="Sophie Stachel Portrait" style="width: 220px; max-width: 220px;">
+      </div>
     </div>
   </section>
 
@@ -89,7 +109,7 @@
       <div class="footer-links" role="navigation" aria-label="Footer-Navigation">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
-        <a href="barrierefreiheit.html" aria-label="Barrierefreiheit">Barrie</a>
+        <a href="barrierefreiheit.html" aria-label="Barrierefreiheit">Barrierefreiheit</a>
         
         </a>
       </div>

@@ -21,8 +21,8 @@ class UniversalNavbar {
           <a href="index.html" class="brand" aria-label="Zur Startseite">Sophie Stachel</a>
           <div class="nav-links" role="menubar">
             <a href="ueber-mich.html" role="menuitem" ${this.currentPage === 'ueber-mich' ? 'class="active"' : ''}>Über mich</a>
-            <a href="methoden.html" role="menuitem" ${this.currentPage === 'methoden' ? 'class="active"' : ''}>Methoden</a>
             <a href="angebote.html" role="menuitem" ${this.currentPage === 'angebote' ? 'class="active"' : ''}>Angebote</a>
+            <a href="methoden.html" role="menuitem" ${this.currentPage === 'methoden' ? 'class="active"' : ''}>Methoden</a>
             <a href="kontakt.html" role="menuitem" ${this.currentPage === 'kontakt' ? 'class="active"' : ''}>Kontakt</a>
           </div>
         </div>
@@ -30,8 +30,8 @@ class UniversalNavbar {
         <!-- Mobile Navigation -->
         <div class="nav-links mobile-nav" id="navLinks" role="menu" aria-label="Mobile Navigation">
           <a href="ueber-mich.html" role="menuitem" ${this.currentPage === 'ueber-mich' ? 'class="active"' : ''}>Über mich</a>
-          <a href="methoden.html" role="menuitem" ${this.currentPage === 'methoden' ? 'class="active"' : ''}>Methoden</a>
           <a href="angebote.html" role="menuitem" ${this.currentPage === 'angebote' ? 'class="active"' : ''}>Angebote</a>
+          <a href="methoden.html" role="menuitem" ${this.currentPage === 'methoden' ? 'class="active"' : ''}>Methoden</a>
           <a href="kontakt.html" role="menuitem" ${this.currentPage === 'kontakt' ? 'class="active"' : ''}>Kontakt</a>
         </div>
 
