@@ -181,7 +181,7 @@ h3:first-of-type { margin-top: 0.5em; }
 section > *:first-child {
   margin-top: 0 !important;
 }
-p { margin: 0.5em 0; font-weight: 200; text-align: justify; }
+p { margin: 0.5em 0; font-weight: 200; text-align: justify; hyphens: auto; }
 
 /* Remove bottom margin from last paragraph in sections */
 section p:last-child {
@@ -475,7 +475,7 @@ section {
   transform: translateY(0);
   max-width: 1000px;
   margin: 0 auto;
-  padding: 1em 4% 0 4%;
+  padding: 1em 4% 2em 4%;
 }
 
 section.visible {

@@ -126,10 +126,14 @@
   <!-- Content -->
   <section class="visible">
     <h3 style="color: #2a6b7e;">Nachricht senden</h3>
-    <form action="#" method="POST">
+    <form action="FORMSPREE_URL_HIER_EINTRAGEN" method="POST">
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="E-Mail" required>
       <textarea name="message" rows="5" placeholder="Nachricht" required></textarea>
+      <!-- Spam-Schutz -->
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="Neue Anfrage über sophiestachel.at">
+      <input type="hidden" name="_language" value="de">
       <button type="submit">Absenden</button>
     </form>
 
@@ -176,7 +180,7 @@
       <p>Ich ersuche um rechtzeitige Absage zumindest 48 Stunden vor einem vereinbarten Termin und bitte um Verständnis dafür, dass kurzfristig stornierte Termine verrechnet werden.</p>
       
       <h4>Verschwiegenheit</h4>
-      <p>Gemäß Gewerbeordnung §119 Abs. 4 bin ich zur Verschwiegenheit verpflichtet.</p>
+      <p>Gemäß Gewerbeordnung §119 Abs. 4 für Lebens- und Sozialberatung bin ich zur Verschwiegenheit verpflichtet.</p>
     </div>
   </section>
 
