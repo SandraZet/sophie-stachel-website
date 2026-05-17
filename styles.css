@@ -253,7 +253,7 @@ nav {
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   font-size: 1.7rem;
-  color: #7B9FAD;
+  color: #2c5f6f;
   letter-spacing: 0.6px;
 }
 
@@ -267,7 +267,7 @@ nav {
   padding: 0.5em 1em;
   border-radius: 4px;
   transition: background-color 0.2s ease;
-  color: #7B9FAD;
+  color: #2c5f6f;
 }
 
 .nav-links a:hover {
@@ -307,7 +307,7 @@ nav {
   display: none;
   font-size: 1.3rem;
   cursor: pointer;
-  color: #7B9FAD;
+  color: #2c5f6f;
   opacity: 0.8;
   outline: none;
   border: none;
@@ -1054,7 +1054,7 @@ footer {
 }
 
 .footer-links a {
-  color: var(--sage-green);
+  color: #3d5c40;
   text-decoration: none;
   padding: 0.3em 0.6em;
   border-radius: 4px;
@@ -1068,7 +1068,7 @@ footer {
 
 .footer-credits {
   font-size: 0.8rem;
-  opacity: 0.7;
+  color: #555;
   margin: 0;
 }
 
